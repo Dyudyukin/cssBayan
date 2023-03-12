@@ -1,0 +1,116 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.bayan-label {
+  cursor: pointer;
+}
+
+.bayan-label input[type=radio]:hover~.bayan-item .bayan-item__image {
+  display: block;
+  margin: 0 auto;
+  color: rgb(228, 129, 64);
+  padding-bottom: 2.5rem;
+  padding-top: 0.6rem;
+  opacity: 100%;
+  max-height: 62.5rem;
+  transform: translateY(0);
+  transition: all 0.3s ease-in;
+}
+
+.bayan-list:hover > .bayan-label .bayan-item  {
+  color: rgb(228, 129, 64);
+}
+
+.bayan-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.06rem solid black;
+  margin: 0 auto;
+}
+
+input {
+  position: absolute;
+  top: -100%;
+  visibility: hidden;
+}
+
+.bayan-label input[type=radio]:checked~.bayan-item .bayan-item__image {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  padding-top: 0.6rem;
+  opacity: 100%;
+  max-height: 62.5rem;
+  transform: translateY(0);
+  transition: all 0.3s ease-in;
+}
+
+.bayan-label input[type=radio]:checked~.bayan-item {
+  color: rgb(228, 129, 64);
+}
+
+input[type="radio"]:not(:checked)~.bayan-item .bayan-item__image {
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  max-height: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  transform: translateY(-10%);
+  transition: all 0.3s ease-out;
+}
+
+input[type="radio"]:not(:checked)~.bayan-item {
+  color: black;
+}
+
+.bayan-label input[type=radio]:checked~.bayan-item .bayan-item__header .bayan-item__icon {
+  background-image: url('../img/close.png');
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.bayan-item:active {
+  color: blue;
+} 
+
+.bayan-list:hover > .bayan-label .bayan-item .bayan-item__header .bayan-item__icon {
+  background-image: url('../img/menu.png');
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.bayan-label input[type=radio]:hover ~ .bayan-item .bayan-item__header .bayan-item__icon {
+  background-image: url('../img/close.png');
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.bayan-label:active .bayan-item .bayan-item__header {
+  color: blue;
+}
+
+.bayan-label:active .bayan-item .bayan-item__header .bayan-item__icon {
+  background-image: url('../img/close-active.png');
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.bayan-label:active > .bayan-item .bayan-item__image {
+  opacity: 0;
+}
