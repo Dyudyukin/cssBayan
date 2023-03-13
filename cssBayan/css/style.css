@@ -26,6 +26,7 @@ body {
 
 .bayan-list:hover>.bayan-label .bayan-item {
   color: rgb(228, 129, 64);
+  transition: 0.3s;
 }
 
 .bayan-item__header {
@@ -37,7 +38,6 @@ body {
 }
 
 input {
-  position: absolute;
   top: -100%;
   visibility: hidden;
 }
@@ -55,6 +55,7 @@ input {
 
 .bayan-label input[type=radio]:checked~.bayan-item {
   color: rgb(228, 129, 64);
+  transition: 0.3s;
 }
 
 input[type="radio"]:not(:checked)~.bayan-item .bayan-item__image {
@@ -70,10 +71,10 @@ input[type="radio"]:not(:checked)~.bayan-item .bayan-item__image {
 
 input[type="radio"]:not(:checked)~.bayan-item {
   color: black;
+  transition: 0.3s;
 }
 
 .bayan-label input[type=radio]:checked~.bayan-item .bayan-item__header .bayan-item__icon {
-  background-image: url('../img/close.png');
   background-size: cover;
   width: 2rem;
   height: 2rem;
@@ -97,14 +98,17 @@ input[type="radio"]:not(:checked)~.bayan-item {
 }
 
 .bayan-label input[type=radio]:active~.bayan-item .bayan-item__image {
+  transition: 0.3s;
   opacity: 30%;
 }
 
 .bayan-label input[type=radio]:active~.bayan-item .bayan-item__header {
+  transition: 0.3s;
   color: blue;
 }
 
 .bayan-label input[type=radio]:active~.bayan-item .bayan-item__header .bayan-item__icon {
+  transition: 0.3s;
   background-image: url('../img/close-active.png');
 }
 
@@ -137,23 +141,37 @@ input[type="radio"]:not(:checked)~.bayan-item {
     max-width: 30rem;
   }
 
+  .bayan-list:hover>.bayan-label .bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
+  }
+
+  .bayan-label input[type=radio]:active~.bayan-item .bayan-item__header .bayan-item__icon {
+    transition: 0.3s;
+    background-image: url('');
+  }
+
+
+
   .bayan-label input[type=radio]:checked~.bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 1rem;
     height: 1rem;
   }
 
   .bayan-list:hover>.bayan-label .bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 1rem;
     height: 1rem;
   }
 
   .bayan-label input[type=radio]:hover~.bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 1rem;
     height: 1rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 510px) {
 
   h1 {
     font-size: 1em;
@@ -183,16 +201,19 @@ input[type="radio"]:not(:checked)~.bayan-item {
   }
 
   .bayan-label input[type=radio]:checked~.bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 0.5rem;
     height: 0.5rem;
   }
 
   .bayan-list:hover>.bayan-label .bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 0.5rem;
     height: 0.5rem;
   }
 
   .bayan-label input[type=radio]:hover~.bayan-item .bayan-item__header .bayan-item__icon {
+    background-image: url('');
     width: 0.5rem;
     height: 0.5rem;
   }
