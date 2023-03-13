@@ -95,6 +95,18 @@ input[type="radio"]:not(:checked)~.bayan-item {
   transition: 0.2s ease-in;
 }
 
+.bayan-label input[type=radio]:active~.bayan-item .bayan-item__image {
+  opacity: 30%;
+}
+
+.bayan-label input[type=radio]:active~.bayan-item .bayan-item__header {
+  color: blue;
+}
+
+.bayan-label input[type=radio]:active~.bayan-item .bayan-item__header .bayan-item__icon {
+  background-image: url('../img/close-active.png');
+}
+
 @media (max-width: 820px) {
   .wrapper {
     max-width: 35.5rem;
